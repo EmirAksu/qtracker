@@ -68,14 +68,3 @@ function resetStreak() {
 }
 
 // Function to display the streak count on the page
-function updateStreakDisplay() {
-    const streakDisplay = document.getElementById('streak');
-    const currentStreak = localStorage.getItem('streak') || 0;
-    streakDisplay.innerText = `Current Streak: ${currentStreak} days`;
-}
-
-// Initialize app
-window.onload = function() {
-    autoCheckIn();
-    initializeGrid();
-};
