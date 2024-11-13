@@ -19,20 +19,51 @@ body {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     /* 7 days in a row */
-    gap: 10px;
-    width: 200px;
+    gap: 5px;
+    width: 160px;
+    margin-top: 20px;
 }
 
 .dot {
     width: 20px;
     height: 20px;
-    border-radius: 50%;
-    background-color: gray;
-    /* Inactive color */
+    border: 1px solid #d0d0d0;
+    /* Border for empty box look */
+    border-radius: 3px;
+    background-color: #ffffff;
+    /* Default background for "empty" dots */
     cursor: pointer;
+    transition: background-color 0.3s;
+    /* Smooth transition */
 }
 
-.active {
-    background-color: green;
-    /* Active color */
+
+/* Activity levels with progressive colors */
+
+.dot.active-1 {
+    background-color: #e6f4e6;
 }
+
+
+/* Low activity */
+
+.dot.active-2 {
+    background-color: #c6eec6;
+}
+
+
+/* Medium activity */
+
+.dot.active-3 {
+    background-color: #8fd88f;
+}
+
+
+/* High activity */
+
+.dot.active-4 {
+    background-color: #4bb34b;
+}
+
+
+/* Very high activity */
